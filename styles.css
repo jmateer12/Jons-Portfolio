@@ -1,12 +1,14 @@
+/*Some global styles that I wanted to apply to the page to style the page to look a bit nicer*/
 img {
-    height: 500px;
-    width: 400px;
+    height: 40%;
+    width: 30%;
 }
 
 body {
     background-color: grey;
 }
 
+/*Here is a class that I use here that I also used in CSCN310 which just aligns elements to the middle of the page*/
 .cmiddle {
     display: flex;
     justify-content: center;
@@ -14,12 +16,34 @@ body {
     flex-direction: column;
 }
 
+/*Below are some ID's that I created for a header element and an element where I talk about my hobbies that change text size, color, and the underline of a link respectively*/
 #header {
-    font-size:40px;
-    color: lightgreen;
+    font-size: 300%;
+    color: salmon;
     text-decoration: none;
 }
 
 #hobbies {
-    color: lightgreen;
+    color: salmon;
+}
+
+/* I used the link https://www.w3schools.com/css/css3_mediaqueries.asp and the examples to make these media queries as I have not done these before, please ignore the color scheme I know it may not look the absolute best I did it to clearly show the media queries in an easy way*/
+
+/*This media query makes the page background turn to lightblue if the page width is less than 600 pixels*/
+@media screen and not (min-width: 600px)  {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/*This media query makes the header and hobby text change to purple if the page height is less than 500 pixels*/
+@media screen and not (min-height: 500px)  {
+    #header {
+        font-size: 300%;
+        color:purple;
+        text-decoration: none;
+    }
+    #hobbies {
+        color: purple;
+    }
 }
