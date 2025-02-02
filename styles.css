@@ -1,11 +1,15 @@
 /*Some global styles that I wanted to apply to the page to style the page to look a bit nicer*/
 img {
-    height: 40%;
-    width: 30%;
+    align-content: center;
+    height: 30%;
+    width: 20%;
+    border-radius: 5%;
 }
 
 body {
-    background-color: grey;
+    background-color: #555555;
+    padding: 0%;
+    margin: 0%;
 }
 
 /*Here is a class that I use here that I also used in CSCN310 which just aligns elements to the middle of the page*/
@@ -16,34 +20,103 @@ body {
     flex-direction: column;
 }
 
+.headerprops {
+    font-family: 'Inter';
+    font-size: 250%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+
+.ml25 {
+    margin-left: 25%;
+}
+
 /*Below are some ID's that I created for a header element and an element where I talk about my hobbies that change text size, color, and the underline of a link respectively*/
-#header {
-    font-size: 300%;
-    color: salmon;
+#messagebutton{
+    font-family: 'Inter';
+    margin-left: 15%;
+    height: 10%;
+    width: 6%;
+    background-color: #98fbcb;
+}
+
+#firstimg {
+    margin-left: 15%;
+}
+
+#about {
+    color: #b2b2b2;
     text-decoration: none;
 }
 
-#hobbies {
-    color: salmon;
+#projects {
+    color: #b2b2b2;
+    text-decoration: none;
+}
+
+#blog {
+    color: #b2b2b2;
+    text-decoration: none;
+}
+
+#resume {
+    color: #b2b2b2;
+    text-decoration: none;
+}
+
+#designtext {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-family: 'Inter';
+    color: #b2b2b2;
+}
+
+#versiontext {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-family: 'Inter';
+    color: #b2b2b2;
+}
+
+#navbackground {
+    background-color: #464545;
+    height: 50px;
+    width: 100%;
+    border-radius: 5%;
+}
+
+#infobackground {
+    position: fixed;
+    bottom: 0%;
+    background-color: #464545;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#intro {
+    color: #b2b2b2;
+    align-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: 'Inter';
 }
 
 /* I used the link https://www.w3schools.com/css/css3_mediaqueries.asp and the examples to make these media queries as I have not done these before, please ignore the color scheme I know it may not look the absolute best I did it to clearly show the media queries in an easy way*/
 
 /*This media query makes the page background turn to lightblue if the page width is less than 600 pixels*/
-@media screen and not (min-width: 600px)  {
-    body {
-        background-color: lightblue;
+@media screen and not (min-width: 825px)  {
+    .headerprops {
+        font-size: 175%;
+        margin-left: 5%;
+        margin-right: 2.5%;
     }
-}
 
-/*This media query makes the header and hobby text change to purple if the page height is less than 500 pixels*/
-@media screen and not (min-height: 500px)  {
-    #header {
-        font-size: 300%;
-        color:purple;
-        text-decoration: none;
-    }
-    #hobbies {
-        color: purple;
+    #messagebutton {
+        width: 15%;
     }
 }
