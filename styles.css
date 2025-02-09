@@ -7,7 +7,7 @@ img {
 }
 
 body {
-    background-color: #555555;
+    background-color: #434343;
     padding: 0%;
     margin: 0%;
 }
@@ -20,6 +20,17 @@ body {
     flex-direction: column;
 }
 
+.resumeinfo {
+    color: #98fbcb;
+    font-family: 'Inter';
+}
+
+.listcontent {
+    margin-left: 10%;
+    color: #b2b2b2;
+    font-family: 'Inter';
+}
+
 .headerprops {
     font-family: 'Inter';
     font-size: 250%;
@@ -27,25 +38,55 @@ body {
     margin-right: 2.5%;
 }
 
+.blogbox {
+    margin-left: 15%;
+    background-color:#333333;
+    border-radius: 75px;
+    height: 300px;
+    width: 70%;
+}
+
 
 .ml25 {
     margin-left: 25%;
 }
 
+.ml10 {
+    margin-left: 10%;
+}
+
+.ml15 {
+    margin-left: 15%;
+}
+
 /*Below are some ID's that I created for a header element and an element where I talk about my hobbies that change text size, color, and the underline of a link respectively*/
+#whoami {
+    font-family: 'Inter';
+    color: #98fbcb;
+}
+
 #messagebutton{
     font-family: 'Inter';
-    margin-left: 15%;
     height: 10%;
     width: 6%;
     background-color: #98fbcb;
+}
+
+#userform {
+    font-family: 'Inter';
+    color: #b2b2b2;
+}
+
+#secretmessage {
+    font-family: 'Inter';
+    color: #b2b2b2;
 }
 
 #firstimg {
     margin-left: 15%;
 }
 
-#about {
+#home {
     color: #b2b2b2;
     text-decoration: none;
 }
@@ -69,27 +110,27 @@ body {
     margin-left: 20px;
     margin-bottom: 20px;
     font-family: 'Inter';
-    color: #b2b2b2;
+    color: #98fbcb;
 }
 
 #versiontext {
     margin-right: 20px;
     margin-bottom: 20px;
     font-family: 'Inter';
-    color: #b2b2b2;
+    color: #98fbcb;
 }
 
 #navbackground {
-    background-color: #464545;
+    background-color: #333333;
     height: 50px;
     width: 100%;
     border-radius: 5%;
 }
 
 #infobackground {
-    position: fixed;
+    border-radius: 5%;
     bottom: 0%;
-    background-color: #464545;
+    background-color: #333333;
     height: 30px;
     width: 100%;
     display: flex;
@@ -100,10 +141,17 @@ body {
 
 #intro {
     color: #b2b2b2;
+    font-size: 110%;
     align-content: center;
     margin-left: 15%;
     margin-right: 15%;
     font-family: 'Inter';
+}
+
+#linebreak {
+    width: 90%;
+    border-color: #333333;
+    border-style: solid;
 }
 
 /* I used the link https://www.w3schools.com/css/css3_mediaqueries.asp and the examples to make these media queries as I have not done these before, please ignore the color scheme I know it may not look the absolute best I did it to clearly show the media queries in an easy way*/
