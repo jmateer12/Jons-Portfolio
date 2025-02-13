@@ -15,10 +15,10 @@
         <!--Here is my navigational section with links contained in a nav tag-->
         <div id="navbackground">
             <nav>
-                <a id="home" class="headerprops ml25" href="./index.html">Home</a>
-                <a id="projects" class="headerprops" href="./projects.html">Projects</a>
-                <a id="blog" class="headerprops" href="./blog.html">Blog</a>
-                <a id="resume" class="headerprops" href="resume.html">Resume</a>
+                <a id="home" class="headerprops ml25" href="./index.html" onmouseover="changenavcolor('home');" onmouseleave="orignavcolor('home')">Home</a>
+                <a id="projects" class="headerprops" href="./projects.html" onmouseover="changenavcolor('projects')" onmouseleave="orignavcolor('projects')">Projects</a>
+                <a id="blog" class="headerprops" href="./blog.html" onmouseover="changenavcolor('blog')" onmouseleave="orignavcolor('blog')">Blog</a>
+                <a id="resume" class="headerprops" href="resume.html" onmouseover="changenavcolor('resume')" onmouseleave="orignavcolor('resume')">Resume</a>
             </nav>
         </div>
         <h1 id="whoami" class="cmiddle">Jon@Mateer:~$ whoami</h1>
@@ -28,35 +28,28 @@
         <p id="intro">Hello my name is Jonathan Mateer(I go by Jon), I'm originally from Carroll Country Maryland.  I'm a Computer Science major here at Liberty University with cognates in software development and general CS.  I'm currently a Junior with an expected graduation year of 2026.  I have a lot of interests but I'll try and contain my excitement and just list a couple of them.  Some of my interests include: building computers for fun, learning further game and web development, japanese, rock climbing, and every once in a while a bit of sound design playing with synthesizers in Ableton.  
         </p>
 
-        <!--User form for individual assignment2-->
-        <form id="userform" class="cmiddle">
-            <label for="firstname">Please enter your first name:</label><br>
-            <input type="text" id="firstname" name="firstname" required><br>
-            <label for="lastname">Please enter your last name:</label><br>
-            <input type="text" id="lastname" name="lastname" required><br>
-            <label for="age">Please enter your age:</label><br>
-            <input type="number" id="age" name="age" required><br>
-            <label for="email">Please enter your email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <!--event handler on the submit button to run JS upon being pressed-->
-            <input type="submit" id="submitform" onclick="event.preventDefault();"><br>
-        </form>
-        <h2 id="secretmessage" class="cmiddle"></h2>
+        <br>
+        <button id="messagebutton" class="cmiddle" type="button" onclick="assigngrades(); getweather();" onmouseover="changebuttoncolor('messagebutton');" onmouseleave="origbuttoncolor('messagebutton');">Calculate Grades</button>
+        <br>
         <br>
 
+        <h1 id="secretmessage" class="cmiddle"></h1>
 
         <!--These are just some images of PCs I've built-->
         <img id="firstimg" src="./merockwall.jpg"/>
         <img src="./meglasses.jpg"/>
         <br>
         <br>
+        <br>
+        
+        
 
         <div id="infobackground">
             <h4 id="designtext">Made by Jon Mateer :&#41;</h4>
-            <h4 id="versiontext">V1.1</h4>
+            <h4 id="versiontext">V1.2</h4>
         </div>
         
 
-        <script src="proj2.js" async defer></script>
+        <script src="proj3.js" async defer></script>
     </body>
 </html>

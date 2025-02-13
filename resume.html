@@ -15,10 +15,10 @@
         <!--Here is my navigational section with links contained in a nav tag-->
         <div id="navbackground">
             <nav>
-                <a id="home" class="headerprops ml25" href="./index.html">Home</a>
-                <a id="projects" class="headerprops" href="./projects.html">Projects</a>
-                <a id="blog" class="headerprops" href="./blog.html">Blog</a>
-                <a id="resume" class="headerprops" href="resume.html">Resume</a>
+                <a id="home" class="headerprops ml25" href="./index.html" onmouseover="changenavcolor('home');" onmouseleave="orignavcolor('home')">Home</a>
+                <a id="projects" class="headerprops" href="./projects.html" onmouseover="changenavcolor('projects')" onmouseleave="orignavcolor('projects')">Projects</a>
+                <a id="blog" class="headerprops" href="./blog.html" onmouseover="changenavcolor('blog')" onmouseleave="orignavcolor('blog')">Blog</a>
+                <a id="resume" class="headerprops" href="resume.html" onmouseover="changenavcolor('resume')" onmouseleave="orignavcolor('resume')">Resume</a>
             </nav>
         </div>
         <div id="resumecontent">
@@ -27,13 +27,25 @@
             <h3 class="cmiddle resumeinfo">jmateer@liberty.edu</h3>
             <hr id="linebreak">
             <h3 class="resumeinfo ml10">Education:</h3>
-            <h4 class="resumeinfo ml10">Liberty University; Lynchburg, VA</h4>
-            <h4 class="resumeinfo ml10">B.S. In Computer Science &#40Software Engineering and General Computer Science&#41</h4>
-            <ul class="listcontent">
+            <h4 class="resumeinfo ml15">Liberty University; Lynchburg, VA</h4>
+            <h4 class="resumeinfo ml15">B.S. In Computer Science &#40Software Engineering and General Computer Science&#41</h4>
+            <ul class="listcontent ml15">
                 <li>Participated in University's Competitive Programming Club(CPC) with Kattis ranking of 9300/100000</li>
                 <li>Attended Game Design and Development Club learning about game design principles, and development through Unreal Engine 5</li>
             </ul>
             <h3 class="resumeinfo ml10">Experience:</h3>
+            <h4 class="resumeinfo ml15">Computer Lab Assistant; Liberty Univeristy; Lynchburg, VA</h4>
+            <ul class="listcontent ml15">
+                <li>Assisted over 65+ customers to connect and interact with Liberty University services such as WI-FI, printing, as well as other software and customer assistance</li>
+                <li>Employee of the Month, November 2024</li>
+                <li>Served customers by maintaining a positive and clean environment</li>
+            </ul>
+            <h4 class="resumeinfo ml15">Volunteer Computer Lab Assistant; Lynchburg Public Library; Lynchburg, VA</h4>
+            <ul class="listcontent ml15">
+                <li>Served members of the communicty by providing technical assistance on the library computers</li>
+                <li>Assisted unemployed residents with the job application process in community web sites</li>
+            </ul>
+            
             <h3 class="resumeinfo ml10">Skills:</h3>
             <ul class="listcontent">
                 <li>Github</li>
@@ -58,9 +70,9 @@
 
         <div id="infobackground">
             <h4 id="designtext">Made by Jon Mateer :&#41</h4>
-            <h4 id="versiontext">V1.1</h4>
+            <h4 id="versiontext">V1.2</h4>
         </div>
 
-        <script src="" async defer></script>
+        <script src="proj3.js" async defer></script>
     </body>
 </html>
