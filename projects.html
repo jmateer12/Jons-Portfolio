@@ -19,17 +19,49 @@
                 <a id="projects" class="headerprops" href="./projects.html" onmouseover="changenavcolor('projects')" onmouseleave="orignavcolor('projects')">Projects</a>
                 <a id="blog" class="headerprops" href="./blog.html" onmouseover="changenavcolor('blog')" onmouseleave="orignavcolor('blog')">Blog</a>
                 <a id="resume" class="headerprops" href="resume.html" onmouseover="changenavcolor('resume')" onmouseleave="orignavcolor('resume')">Resume</a>
+                <img id="github" src="github-mark.png"/>
             </nav>
         </div>
 
          <!--Where the Page Content will Go-->
          <br>
-         <img id="firstimg" src="./mypc.jpg"/>
-         <img src="./sisterspc.jpg"/>
+         <div class="projectcontainer"> 
+            <div>
+                <img class="projectimg" src="./mypc.jpg" onclick="imageoverlay('./mypc.jpg')">
+            </div>
+            <div>
+                <h1 class="projecttitle">My PC</h1>
+                <ul class="projecttext">
+                    <li>CPU: AMD Ryzen 3 3200g</li>
+                    <li>RAM: 8GB DDR4 2x4GB DIMMS 3200Mhz</li>
+                    <li>GPU: 8GB Radeon RX570</li>
+                    <li>Motherboard: Gigabyte A320M</li>
+                </ul>
+            </div>
+         </div>
          <br>
          <br>
          <br>
          <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         
+         <div class="projectcontainer"> 
+            <div>
+                <img class="projectimg" src="./sisterspc.jpg" onclick="imageoverlay('./sisterspc.jpg')">
+            </div>
+            <div>
+                <h1 class="projecttitle">Sister's PC</h1>
+                <ul class="projecttext">
+                    <li>CPU: AMD Ryzen 5 5500</li>
+                    <li>RAM: 16GB DDR4 2x8GB DIMMS 3200Mhz</li>
+                    <li>GPU: 8GB Radeon RX6700XT</li>
+                    <li>Motherboard: MSI B550M</li>
+                </ul>
+            </div>
+         </div>
          <br>
          <br>
          <br>
@@ -46,10 +78,10 @@
     
 
         <div id="infobackground">
-            <h4 id="designtext">Made by Jon Mateer :&#41</h4>
-            <h4 id="versiontext">V1.2</h4>
+            <h4 id="designtext" onmouseover="facewink('designtext')">Made by Jon Mateer :&#41</h4>
+            <h4 id="versiontext">V1.3</h4>
         </div>
         
-        <script src="proj3.js" async defer></script>
+        <script src="proj5.js" async defer></script>
     </body>
 </html>

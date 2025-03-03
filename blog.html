@@ -19,13 +19,21 @@
                 <a id="projects" class="headerprops" href="./projects.html" onmouseover="changenavcolor('projects')" onmouseleave="orignavcolor('projects')">Projects</a>
                 <a id="blog" class="headerprops" href="./blog.html" onmouseover="changenavcolor('blog')" onmouseleave="orignavcolor('blog')">Blog</a>
                 <a id="resume" class="headerprops" href="resume.html" onmouseover="changenavcolor('resume')" onmouseleave="orignavcolor('resume')">Resume</a>
+                <img id="github" src="github-mark.png"/>
             </nav>
         </div>
 
         <!--Where the Page Content will Go-->
         <br>
         <div class="blogbox">
-
+            <div>
+                <img class="blogimg" src="./CPU.jpg" onclick="imageoverlay('./CPU.jpg')">
+            </div>
+            <div>
+                <h1 class="blogtitle">Beginners Guide to CPUs</h1>
+                <p class="blogtext">The topic of CPUs are very important to computers as at the heart they are computers in and of themselves, but at a more basic level what really are they?  To put it simply a CPU which stands for Central Processing Unit is the brains of the computer it is what's responsible for all the calculations made on a given computer.  A processor or CPU is a very complicated device so let's break it down by explaining some basic terminology.  First let's start with the idea of cores these are sub-processors a given CPU has, so if a CPU has 4 cores then that means inside that processor there are 4 little processors in the chip that perform the workload of that CPU.  These cores divide the workload of computations on the computer to accomplish more in a smaller amount of time and allow for more multitasking abilities in the computer.  This is taken further with the idea of threads which is the idea of breaking down a single core into 2 virtual streams of computations called threads.</p>
+            </div>
+            
         </div>
         <br>
         <br>
@@ -48,11 +56,11 @@
         
 
         <div id="infobackground">
-            <h4 id="designtext">Made by Jon Mateer :&#41</h4>
-            <h4 id="versiontext">V1.2</h4>
+            <h4 id="designtext" onmouseover="facewink('designtext')">Made by Jon Mateer :&#41</h4>
+            <h4 id="versiontext">V1.3</h4>
         </div>
         
 
-        <script src="proj3.js" async defer></script>
+        <script src="proj5.js" async defer></script>
     </body>
 </html>

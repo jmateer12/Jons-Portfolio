@@ -38,12 +38,56 @@ body {
     margin-right: 2.5%;
 }
 
+.projectcontainer {
+    margin-left: 20%;
+}
+
+.projectimg {
+    height: 10%;
+    width: 20%;
+    float: left;
+}
+
+.projecttitle {
+    margin-left: 40%;
+    color: #98fbcb;
+    font-family: 'Inter';
+}
+
+.projecttext {
+    margin-left: 30%;
+    margin-right: 6%;
+    color:#b2b2b2;
+    font-family: 'Inter';
+}
+
 .blogbox {
-    margin-left: 15%;
-    background-color:#333333;
+    margin-left: 12.5%;
+    background-color: #333333;
     border-radius: 75px;
-    height: 300px;
-    width: 70%;
+    height: 350px;
+    width: 75%;
+}
+
+.blogimg {
+    margin-left: 4%;
+    margin-top: 2%;
+    width: 20%;
+    height: 40%;
+    float: left;
+}
+
+.blogtitle {
+    margin-left: 45%;
+    color: #98fbcb;
+    font-family: 'Inter';
+}
+
+.blogtext {
+    margin-left: 30%;
+    margin-right: 6%;
+    color:#b2b2b2;
+    font-family: 'Inter';
 }
 
 
@@ -61,8 +105,16 @@ body {
 
 /*Below are some ID's that I created for a header element and an element where I talk about my hobbies that change text size, color, and the underline of a link respectively*/
 #whoami {
-    font-family: 'Inter';
+    font-family: 'Micro 5';
     color: #98fbcb;
+    font-size: 300%;
+}
+
+#github {
+    margin-top: 7.5px;
+    margin-left: 7.5%;
+    height: 35px;
+    width: 35px;
 }
 
 #messagebutton{
@@ -147,6 +199,21 @@ body {
     font-family: 'Inter';
 }
 
+#resumehead {
+    float: left;
+    margin-left: 40%;
+}
+
+#picturecontainer {
+    float: right;
+    margin-right: 200px;
+}
+
+#resumepicture {
+    height: 200px;
+    width: 150px;
+}
+
 #linebreak {
     width: 90%;
     border-color: #333333;
@@ -157,7 +224,7 @@ body {
 
 @media screen and not (min-width: 825px)  {
     .headerprops {
-        font-size: 175%;
+        font-size: 150%;
         margin-left: 5%;
         margin-right: 2.5%;
     }

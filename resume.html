@@ -19,19 +19,31 @@
                 <a id="projects" class="headerprops" href="./projects.html" onmouseover="changenavcolor('projects')" onmouseleave="orignavcolor('projects')">Projects</a>
                 <a id="blog" class="headerprops" href="./blog.html" onmouseover="changenavcolor('blog')" onmouseleave="orignavcolor('blog')">Blog</a>
                 <a id="resume" class="headerprops" href="resume.html" onmouseover="changenavcolor('resume')" onmouseleave="orignavcolor('resume')">Resume</a>
+                <img id="github" src="github-mark.png"/>
             </nav>
         </div>
         <div id="resumecontent">
-            <h1 class="cmiddle resumeinfo">Jonathan Mateer</h1>
-            <h3 class="cmiddle resumeinfo">Liberty University, Lynchburg VA 24515</h3>
-            <h3 class="cmiddle resumeinfo">jmateer@liberty.edu</h3>
+            <div>
+                <div id="resumehead">
+                    <h1 class="cmiddle resumeinfo">Jonathan Mateer</h1>
+                    <h3 class="cmiddle resumeinfo">Liberty University, Lynchburg VA 24515</h3>
+                    <h3 class="cmiddle resumeinfo">jmateer@liberty.edu</h3>
+                </div>
+                <div id="picturecontainer">
+                    <br>
+                    <img id="resumepicture" src="./meheadphones.jpg" onclick="imageoverlay('./meheadphones.jpg')">
+                </div>
+            </div>
+            
+           
+            
             <hr id="linebreak">
             <h3 class="resumeinfo ml10">Education:</h3>
             <h4 class="resumeinfo ml15">Liberty University; Lynchburg, VA</h4>
             <h4 class="resumeinfo ml15">B.S. In Computer Science &#40Software Engineering and General Computer Science&#41</h4>
             <ul class="listcontent ml15">
                 <li>Participated in University's Competitive Programming Club(CPC) with Kattis ranking of 9300/100000</li>
-                <li>Attended Game Design and Development Club learning about game design principles, and development through Unreal Engine 5</li>
+                <li>Attended Game Design and Development Club learning about game design principles and development through Unreal Engine 5 and Godot</li>
             </ul>
             <h3 class="resumeinfo ml10">Experience:</h3>
             <h4 class="resumeinfo ml15">Computer Lab Assistant; Liberty Univeristy; Lynchburg, VA</h4>
@@ -69,10 +81,10 @@
         </div>
 
         <div id="infobackground">
-            <h4 id="designtext">Made by Jon Mateer :&#41</h4>
-            <h4 id="versiontext">V1.2</h4>
+            <h4 id="designtext" onmouseover="facewink('designtext')">Made by Jon Mateer :&#41</h4>
+            <h4 id="versiontext">V1.3</h4>
         </div>
 
-        <script src="proj3.js" async defer></script>
+        <script src="proj5.js" async defer></script>
     </body>
 </html>
