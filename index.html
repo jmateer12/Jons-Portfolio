@@ -16,18 +16,20 @@
         <!--Here is my navigational section with links contained in a nav tag-->
         <div id="navbackground">
             <nav>
-                <a id="home" class="headerprops ml25" href="./index.html" onmouseover="changenavcolor('home');" onmouseleave="orignavcolor('home')">Home</a>
-                <a id="projects" class="headerprops" href="./projects.html" onmouseover="changenavcolor('projects')" onmouseleave="orignavcolor('projects')">Projects</a>
-                <a id="blog" class="headerprops" href="./blog.html" onmouseover="changenavcolor('blog')" onmouseleave="orignavcolor('blog')">Blog</a>
-                <a id="resume" class="headerprops" href="resume.html" onmouseover="changenavcolor('resume')" onmouseleave="orignavcolor('resume')">Resume</a>
-                <img id="github" src="github-mark.png"/>
+                <a id="home" class="headerprops ml25" href="./index.html" onmouseover="changenavcolor('home');" onmouseleave="orignavcolor('home')">HOME</a>
+                <a id="projects" class="headerprops" href="./projects.html" onmouseover="changenavcolor('projects')" onmouseleave="orignavcolor('projects')">PROJECTS</a>
+                <a id="blog" class="headerprops" href="./blog.html" onmouseover="changenavcolor('blog')" onmouseleave="orignavcolor('blog')">BLOG</a>
+                <a id="resume" class="headerprops" href="resume.html" onmouseover="changenavcolor('resume')" onmouseleave="orignavcolor('resume')">RESUME</a>
+                <a href="https://github.com/jmateer12">
+                    <img id="github" src="github-mark.png"/>
+                </a>
             </nav>
         </div>
         <h1 id="whoami" class="cmiddle">Jon@Mateer:~$ whoami</h1>
 
 
         <!--A brief paragraph of some things about me-->
-        <p id="intro">Hello my name is Jonathan Mateer(I go by Jon), I'm originally from Carroll Country Maryland.  I'm a Computer Science major here at Liberty University with cognates in software development and general CS.  I'm currently a Junior with an expected graduation year of 2026.  I have a lot of interests but I'll try and contain my excitement and just list a couple of them.  Some of my interests include: building computers for fun, further learning about game and web development, japanese, rock climbing, and every once in a while a bit of sound design playing with synthesizers in Ableton.  
+        <p id="intro">Hello my name is Jonathan Mateer(I go by Jon), I'm originally from Carroll Country Maryland.  I'm a Computer Science major here at Liberty University with cognates in software development and general CS.  I'm currently a Junior with an expected graduation year of 2026.  I have a lot of interests but I'll try and contain my excitement and just list a couple of them.  Some of my interests include: building computers for fun, further learning about game and web development, japanese, rock climbing, reading, sound design playing with synthesizers in Ableton.  
         </p>
         <!--I run a script here to demonstrate making an element with createElement and appendChild-->
         <script>
@@ -38,6 +40,25 @@
             head.style.marginLeft = "15%"
             document.body.appendChild(head)
         </script>
+        <form id="userform" name="userform">
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="confirpassword">Confirm Password:</label><br>
+            <input type="password" id="confirpassword" name="confirpassword" required><br>
+            <label for="phonenum">Phone Number:</label><br>
+            <input type="text" id="phonenum" name="phonenum" required><br>
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob"><br>
+            <label for="terms">Agree to terms:</label><br>
+            <input type="checkbox" id="terms" name="terms"><br>
+            <input type="submit" onclick="event.preventDefault(); validateform();">
+        </form>
         <br>
         <br>
         <br>
@@ -53,10 +74,10 @@
 
         <div id="infobackground">
             <h4 id="designtext" onmouseover="facewink('designtext')">Made by Jon Mateer :&#41;</h4>
-            <h4 id="versiontext">V1.3</h4>
+            <h4 id="versiontext">v1.3</h4>
         </div>
         
 
-        <script src="proj5.js" async defer></script>
+        <script src="proj6.js" async defer></script>
     </body>
 </html>
