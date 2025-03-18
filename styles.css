@@ -232,6 +232,20 @@ body {
     border-style: solid;
 }
 
+#hobbytext {
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #98fbcb;
+    font-family: 'Inter';
+}
+
+#filetext {
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #98fbcb;
+    font-family: 'Inter';
+}
+
 /* I used the link https://www.w3schools.com/css/css3_mediaqueries.asp and the examples to make these media queries as I have not done these before, please ignore the color scheme I know it may not look the absolute best I did it to clearly show the media queries in an easy way*/
 
 @media screen and not (min-width: 825px)  {

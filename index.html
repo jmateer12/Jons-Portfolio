@@ -57,8 +57,20 @@
             <input type="date" id="dob" name="dob"><br>
             <label for="terms">Agree to terms:</label><br>
             <input type="checkbox" id="terms" name="terms"><br>
-            <input type="submit" onclick="event.preventDefault(); validateform();">
+            <label for="hobbies">Please choose your hobbies:</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">reading</label><br>
+            <input type="checkbox" id="climbing" name="hobbies" value="climbing">
+            <label for="climbing">climbing</label><br>
+            <input type="checkbox" id="watchmovies" name="hobbies" value="watching movies">
+            <label for="watchmovies">watching movies</label><br>
+           
+            <label for="fileupload">Please select a file to display(.txt):</label><br>
+            <input type="file" accept=".txt" id="fileupload" name="fileupload"><br>
+            <input type="submit" onclick="event.preventDefault(); validateform(); printhobbys(); printfile();">
         </form>
+        <p id="hobbytext"></p><br>
+        <p id="filetext"></p>
         <br>
         <br>
         <br>
@@ -78,6 +90,6 @@
         </div>
         
 
-        <script src="proj6.js" async defer></script>
+        <script src="proj7.js" async defer></script>
     </body>
 </html>
