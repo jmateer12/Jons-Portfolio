@@ -95,6 +95,13 @@ body {
     display: block;
 }
 
+.taskbuttons {
+    border-radius: 10px;
+    margin-left: 2.5px;
+    background-color: #98fbcb;
+    font-family: 'Inter';
+}
+
 
 .ml25 {
     margin-left: 25%;
@@ -235,6 +242,23 @@ body {
 #hobbytext {
     margin-left: 15%;
     margin-right: 15%;
+    color: #98fbcb;
+    font-family: 'Inter';
+}
+
+#currtasks {
+    margin-left: 20%;
+    color: #98fbcb;
+    font-family: 'Inter';
+}
+
+#viewtasks {
+    margin-left: 30%;
+}
+
+#taskform {
+    margin-left: 42.5%;
+    margin-bottom: 5px;
     color: #98fbcb;
     font-family: 'Inter';
 }
