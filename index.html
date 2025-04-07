@@ -32,30 +32,16 @@
         <p id="intro">Hello my name is Jonathan Mateer(I go by Jon), I'm originally from Carroll Country Maryland.  I'm a Computer Science major here at Liberty University with cognates in software development and general CS.  I'm currently a Junior with an expected graduation year of 2026.  I have a lot of interests but I'll try and contain my excitement and just list a couple of them.  Some of my interests include: building computers for fun, further learning about game and web development, japanese, rock climbing, reading, sound design playing with synthesizers in Ableton.  
         </p>
 
-        <!--Form to use to modify the task feature-->
-        <form id="taskform">
-            <label for="name">Task Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="description">Description:</label><br>
-            <input type="text" id="description" name="description" required><br>
-            <label for="isdone">Is Done:</label><br>
-            <input type="checkbox" id="isdone" name="isdone" required><br>
-            <label for="priority">Priority:</label><br>
-            <input type="radio" id="highprior" name="priority" value="High" required>
-            <label for="highprior">High</label><br>
-            <input type="radio" id="medprior" name="priority" value="Medium" required>
-            <label for="medprior">Medium</label><br>
-            <input type="radio" id="lowprior" name="priority" value="Low" required>
-            <label for="lowprior">Low</label>
+        <!--Form to use to modify the webpage-->
+        <form id="custform">
+            <label for="backgroundcolor">Background Color:</label><br>
+            <input type="color" id="backgroundcolor" name="backgroundcolor"><br>
+            <label for="textcolor">Text Color:</label><br>
+            <input type="color" id="textcolor" name="textcolor" required><br>
+            <label for="fontsize">Font Size:</label><br>
+            <input type="number" id="fontsize" name="fontsize" required><br>
+            <input type="submit" value="submit">
         </form>
-        <!--Buttons that interact with the task feature-->
-        <button id="viewtasks" class="taskbuttons" type="button">View Tasks</button>
-        <button id="addtask" class="taskbuttons" type="button">Add Task</button>
-        <button id="removetask" class="taskbuttons" type="button">Remove Task</button>
-        <button id="updatetask" class="taskbuttons" type="button">Update Task</button>
-        <button id="completetask" class="taskbuttons" type="button">Mark task complete</button>
-        <!--Header where the task text appears-->
-        <h3 id="currtasks"></h3>
         <br>
         <br>
         <br>
@@ -75,7 +61,7 @@
         </div>
         
 
-        <script src="proj7.js" async defer></script>
+        <script src="proj9.js" async defer></script>
         <script src="objects.js" async defer></script>
     </body>
 </html>
