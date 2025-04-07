@@ -1,6 +1,6 @@
 //Function to fetch cookie information and format it giving it a data field as the argument
 function getCookie(name) {
-    const value = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+    let value = document.cookie.split('; ').find(row => row.startsWith(name + '='));
     return value ? value.split('=')[1] : null;
 }
   
@@ -30,7 +30,7 @@ function loadPreferences() {
 
 //Function to write the url of the form and to apply changes
 function writeurl(event) {
-    event.preventDefault(event);
+    event.preventDefault();
   
     //Fetches values from the form to do operations upon
     let backgroundColor = document.getElementById('backgroundcolor').value;
