@@ -1,65 +1,81 @@
-//Function to fetch cookie information and format it giving it a data field as the argument
+//Load the user preferences when the website is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    loadPreferences();
+});
+
+//Event listener for when the submit button is pressed
+window.addEventListener('load', () => {
+    const form = document.getElementById('custform');
+    if (form) {
+        form.addEventListener('submit', writeurl); 
+    }
+});
+
+
+//Gets values for a cookie given a name
 function getCookie(name) {
-    let value = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+    const value = document.cookie
+        .split('; ')
+        .find(row => row.startsWith(name + '='));
     return value ? value.split('=')[1] : null;
 }
-  
-//Function used to load preferences to the page and into the form
+
+//Loads preferences to the page if a cookie is present
 function loadPreferences() {
-    //Using the getCookie() function to fetch the values for the data
-    let bg = getCookie('bg');
-    let text = getCookie('text');
-    let size = getCookie('size');
-  
-    //Checks if the data for the cookie exists if it does it will apply it both to the page and the form
+    const bg = getCookie('bg');
+    const text = getCookie('text');
+    const size = getCookie('size');
+
+    console.log("Loaded cookies:", document.cookie);
+    console.log("Parsed:", { bg, text, size });
+
     if (bg) {
-      document.getElementById('backgroundcolor').value = bg;
-      document.body.style.backgroundColor = bg;
+        document.getElementById('backgroundcolor').value = decodeURIComponent(bg);
+        document.body.style.backgroundColor = decodeURIComponent(bg);
     }
-  
+
     if (text) {
-      document.getElementById('textcolor').value = text;
-      document.body.style.color = text;
+        document.getElementById('textcolor').value = decodeURIComponent(text);
+        document.body.style.color = decodeURIComponent(text);
     }
-  
+
     if (size) {
-      document.getElementById('fontsize').value = size.replace('px', '');
-      document.body.style.fontSize = size;
+        const fontSize = decodeURIComponent(size.replace('px', ''));
+        document.getElementById('fontsize').value = fontSize;
+        document.body.style.fontSize = `${fontSize}px`;
     }
 }
 
-//Function to write the url of the form and to apply changes
+//Writes changes to page and makes a cookie for it
 function writeurl(event) {
     event.preventDefault();
-  
-    //Fetches values from the form to do operations upon
-    let backgroundColor = document.getElementById('backgroundcolor').value;
-    let textColor = document.getElementById('textcolor').value;
-    let fontSize = document.getElementById('fontsize').value;
-  
-    //Set cookies to have an expiration date to 1 day
-    let now = new Date();
+
+    console.log("Form submitted. Applying changes...");
+
+    const backgroundColor = document.getElementById('backgroundcolor').value;
+    const textColor = document.getElementById('textcolor').value;
+    const fontSize = document.getElementById('fontsize').value;
+
+    const now = new Date();
     now.setTime(now.getTime() + (1 * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + now.toUTCString();
-  
-    //Saves the form preferences as a cookie
-    document.cookie = `bg=${backgroundColor}; ${expires}; path=/`;
-    document.cookie = `text=${textColor}; ${expires}; path=/`;
-    document.cookie = `size=${fontSize}px; ${expires}; path=/`;
-  
-    //Applies the styles to the page
+    const expires = "expires=" + now.toUTCString();
+
+    //Set cookies
+    document.cookie = `bg=${encodeURIComponent(backgroundColor)}; ${expires}; path=/`;
+    document.cookie = `text=${encodeURIComponent(textColor)}; ${expires}; path=/`;
+    document.cookie = `size=${encodeURIComponent(fontSize)}px; ${expires}; path=/`;
+
+    //Debug log
+    console.log("Cookies written:");
+    console.log(document.cookie);
+
+    //Apply styles immediately
     document.body.style.backgroundColor = backgroundColor;
     document.body.style.color = textColor;
-    document.body.style.fontSize = fontSize + 'px';
+    document.body.style.fontSize = `${fontSize}px`;
 }
-  
-//An event listener to listen for when the submit button is pressed and to load the preferences
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('custform').addEventListener('submit', writeurl);
-  
-    //Load preferences when the page is loaded
-    loadPreferences();
-});
+
+
 
 
 function printhobbys(){

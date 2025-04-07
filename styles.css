@@ -263,6 +263,11 @@ body {
     font-family: 'Inter';
 }
 
+#example {
+    margin-left: 42.5%;
+    font-family: 'Inter';
+}
+
 #filetext {
     margin-left: 15%;
     margin-right: 15%;
