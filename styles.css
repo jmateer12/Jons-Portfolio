@@ -256,16 +256,32 @@ body {
     margin-left: 30%;
 }
 
-#custform {
-    margin-left: 42.5%;
-    margin-bottom: 5px;
-    color: #98fbcb;
+#fetch {
+    margin-left: 45%;
     font-family: 'Inter';
+    background-color: #98fbcb;
+    border-radius: 25px;
 }
 
-#example {
-    margin-left: 42.5%;
+#xml {
+    margin-left: 44.5%;
     font-family: 'Inter';
+    background-color: #98fbcb;
+    border-radius: 25px;
+}
+
+#xmltext {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: 'Inter';
+    color: #98fbcb;
+}
+
+#fetchtext {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: 'Inter';
+    color: #98fbcb;
 }
 
 #filetext {

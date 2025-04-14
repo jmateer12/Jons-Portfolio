@@ -32,17 +32,12 @@
         <p id="intro">Hello my name is Jonathan Mateer(I go by Jon), I'm originally from Carroll Country Maryland.  I'm a Computer Science major here at Liberty University with cognates in software development and general CS.  I'm currently a Junior with an expected graduation year of 2026.  I have a lot of interests but I'll try and contain my excitement and just list a couple of them.  Some of my interests include: building computers for fun, further learning about game and web development, japanese, rock climbing, reading, sound design playing with synthesizers in Ableton.  
         </p>
 
-        <!--Form to use to modify the webpage-->
-        <form id="custform">
-            <label for="backgroundcolor">Background Color:</label><br>
-            <input type="color" id="backgroundcolor" name="backgroundcolor"><br>
-            <label for="textcolor">Text Color:</label><br>
-            <input type="color" id="textcolor" name="textcolor" required><br>
-            <label for="fontsize">Font Size:</label><br>
-            <input type="number" id="fontsize" name="fontsize" required><br>
-            <input type="submit">
-        </form>
-        <p id="example">Example Text</p>
+        <!--Buttons to interact with chosen APIs-->
+        <button type="button" id="fetch" onclick="printcatfact(); event.preventDefault();">Fetch cat fact</button><br>
+        <button type="button" id="xml" onclick="printfakename(); event.preventDefault();">XML fake name</button>
+        <!--Text locations for the API text results to go-->
+        <p id="fetchtext">Fetch Text</p>
+        <p id="xmltext">XML text</p>
         <br>
         <br>
         <br>
@@ -62,6 +57,6 @@
         </div>
         
 
-        <script src="proj9.js" async defer></script>
+        <script src="proj11.js" async defer></script>
     </body>
 </html>
