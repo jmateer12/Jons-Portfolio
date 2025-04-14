@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body>
+    <body onload="draggame()">
         <!--Here is my navigational section with links contained in a nav tag-->
         <div id="navbackground">
             <nav>
@@ -26,7 +26,25 @@
         </div>
 
          <!--Where the Page Content will Go-->
-         <br>
+
+         <!--Container where game elements live with the holes, shapes, timer text, game text, and reset buttons-->
+        <div id="container">
+            <h1 id="timer">Time: 0 seconds</h1>
+            <div id="squarehole" style="top: 200px; left: 400px;"></div>
+            <div id="circlehole" style="top: 200px; left: 600px;"></div>
+            <div id="rectanglehole" style="top: 200px; left: 800px;"></div>
+            <div id="square" draggable="true" style="top: 50px; left: 400px;"></div>
+            <div id="circle" draggable="true" style="top: 50px; left: 600px;"></div>
+            <div id="rectangle" draggable="true" style="top: 50px; left: 800px;"></div>
+            <button type="button" id="reset" onclick="resetgame(); event.preventDefault();" >Reset</button>
+            <h1 id="gametext"></h1>
+        </div>
+
+         <br><br><br><br>
+         
+         
+         
+         
          <div class="projectcontainer"> 
             <div>
                 <img class="projectimg" src="./mypc.jpg" onclick="imageoverlay('./mypc.jpg')">

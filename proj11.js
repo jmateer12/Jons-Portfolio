@@ -1,3 +1,145 @@
+//Define the timer variables to use in game
+let timerInterval;
+let seconds = 0; 
+
+//Start the timer if it hasn't started and start incrementing the timer and writing it to the timer text
+function startTimer() {
+    if (!timerInterval) {
+        timerInterval = setInterval(function() {
+            seconds++;
+            document.getElementById('timer').innerText = "Time: " + seconds + " seconds";
+        }, 1000);
+    }
+}
+
+//Stop the timer if it's running this includes clearing the interval and the timerInterval variable setting it to null or no value
+function stopTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null; 
+    }
+}
+
+//Logic of the drag game
+function draggame() {
+    //Define our shapes and current id we're using
+    const shapeIds = ["square", "circle", "rectangle"];
+    let currentDragId = null;
+
+    //Loop through each shape and the hole its respective hole
+    shapeIds.forEach(id => {
+        const shape = document.getElementById(id);
+        const hole = document.getElementById(id + "hole");
+
+        //Tracks the start of the currently dragged shape
+        shape.addEventListener("dragstart", function(ev) {
+            currentDragId = ev.target.id; 
+            ev.dataTransfer.setData("text", ev.target.id);
+        });
+
+        //Handles the dragover logic for shapes and the holes
+        hole.addEventListener("dragover", function(ev) {
+            ev.preventDefault();
+
+            if (currentDragId == id) {
+                hole.style.boxShadow = "0 0 15px #98fbcb";
+            }
+        });
+
+        //Defines the dragleave logic for the shapes/holes
+        hole.addEventListener("dragleave", function() {
+            hole.style.boxShadow = "";
+        });
+
+        //Defines the drop logic for the shapes/holes including an error message
+        hole.addEventListener("drop", function(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            const dragged = document.getElementById(data);
+
+            hole.style.boxShadow = "";
+            currentDragId = null; 
+
+            if (data == id) {
+                dragged.style.position = "static";
+                dragged.style.top = "";
+                dragged.style.left = "";
+
+                hole.innerHTML = "";
+                hole.appendChild(dragged);
+
+                //Calls function to check if game is completed
+                checkForGameCompletion();
+            } else {
+                document.getElementById('gametext').innerHTML = "Oops! That's not the right hole.";
+            }
+        });
+    });
+
+    //Only starts timer if it hasn't been started already, should only happen at beginnning of game
+    if (!timerInterval) {  
+        startTimer();
+    }
+}
+
+//Checks if all the shapes are in the correct holes and displays congratulations message if they are
+function checkForGameCompletion() {
+    const shapeIds = ["square", "circle", "rectangle"];
+    let allMatched = true;
+
+    shapeIds.forEach(id => {
+        const shape = document.getElementById(id);
+        const hole = document.getElementById(id + "hole");
+
+        if (hole.contains(shape) == false) {
+            allMatched = false;
+        }
+    });
+
+    // If all shapes are matched, stop the timer
+    if (allMatched) {
+        stopTimer();
+        document.getElementById('gametext').innerHTML = "Congratulations! You've matched all shapes!";
+    }
+}
+
+//Clears the timer, resets the game, and shuffles the pieces
+function resetgame() {
+    stopTimer();
+    seconds = 0;
+    document.getElementById('timer').innerText = "Time: 0 seconds";
+    
+    const shapeIds = ["square", "circle", "rectangle"];
+    const container = document.getElementById("container");
+    const positions = [400, 600, 800];
+
+    for (let i = positions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [positions[i], positions[j]] = [positions[j], positions[i]];
+    }
+
+    shapeIds.forEach((id, index) => {
+        const shape = document.getElementById(id);
+        const hole = document.getElementById(id + "hole");
+
+        if (hole.contains(shape)) {
+            hole.removeChild(shape);
+        }
+
+        container.appendChild(shape);
+
+        shape.style.position = "absolute";
+        shape.style.top = "50px";
+        shape.style.left = `${positions[index]}px`;
+    });
+
+    document.getElementById('gametext').innerHTML = "";
+    startTimer();
+}
+
+
+
+
 function printcatfact(){
     //Something I noticed was that fetch is much simpler to setup and use
     //Setup fetch request to get random cat fact
@@ -24,7 +166,7 @@ function printfakename(){
     //We use this object to construct the full name and then display that to the page using xmltext
     //We also display an error message here if it can't fetch a name
     xhr.onload = function () {
-        if (xhr.status === 200) {
+        if (xhr.status == 200) {
             const response = JSON.parse(xhr.responseText);
             const nameObj = response.results[0].name;
             const fullName = `${nameObj.title} ${nameObj.first} ${nameObj.last}`;
